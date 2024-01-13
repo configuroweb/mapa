@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo en Javascript</title>
+    
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+
+            <div class="map-container">
+                <div class="map" id="map"></div>
+            </div>
+
+            <div class="marked-container">
+                <h1>Registra tu Área en el Mapa</h1>
+                <hr>
+                <button onclick="closeMarkerContainer()">&#10062;</button>
+                <div class="marker">
+                    <div class="input-group">
+                        <h3>Nombre del Área:</h3>
+                        <input id="markerName" type="text">
+                    </div>
+                    <div class="input-group">
+                        <h3>Latitud:</h3>
+                        <input id="latitude" type="text" readonly>
+                    </div>
+                    <div class="input-group">
+                        <h3>Longitud:</h3>
+                        <input id="longitude" type="text" readonly>
+                    </div>
+
+                    <button id="saveMarker" onclick="saveMarker()">Guardar Ubicación</button>
+                </div>
+                <hr>
+                <div class="marked">
+                    <h2>Registro de Ubicaciones</h2>
+                    <ul id="markedLocations"></ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Leaflet.js JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+</body>
+</html>

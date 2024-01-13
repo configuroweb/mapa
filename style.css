@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1562504208-03d85cc8c23e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+}
+
+.map-container {
+    width: 70%;
+}
+    
+.map {
+    width: 100%;
+    height: 840px;
+}
+
+.marked-container {
+    position: relative;
+    height: 800px;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.marked-container > h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+.marked-container > button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.marked-container > button:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin: 10px;
+}
+
+.input-group > input {
+    padding: 5px;
+    outline: none;
+    font-size: 17px;
+    width: 170px;
+}
+
+.marker > button {
+    width: 95%;
+    padding: 5px;
+    font-size: 17px;
+    margin: 10px;
+}
+
+.marked > h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#markedLocations {
+    list-style: none;
+}
+
+#markedLocations > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+#markedLocations > li div {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 90%;
+    padding: 15px;
+    margin: 10px;
+}
+
+#markedLocations > li div button {
+    font-size: 16px;
+    color: rgb(0, 0, 255);
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#markedLocations > li div button:hover {
+    color: rgb(88, 88, 255);
+    text-decoration: none;
+}
