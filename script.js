@@ -35,7 +35,7 @@ function saveMarker() {
         markers.push(marker);
         updateMarkedLocations();
     } else {
-        alert('Please fill in all the fields.');
+        alert('Debes llenar todos los campos');
     }
 }
 
@@ -45,7 +45,7 @@ function updateMarkedLocations() {
 
     markers.forEach(function(marker) {
         var listItem = document.createElement('li');
-        listItem.innerHTML = `<div>${marker.name} <button onclick="viewLocation(${marker.lat}, ${marker.lng})">View Location</button></div>`;
+        listItem.innerHTML = `<div>${marker.name} <button onclick="viewLocation(${marker.lat}, ${marker.lng})">Ver Ubicación</button></div>`;
         markedLocationsList.appendChild(listItem);
 
         L.marker([marker.lat, marker.lng]).addTo(map)
